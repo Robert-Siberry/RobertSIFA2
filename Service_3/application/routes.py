@@ -2,9 +2,9 @@ from application import app
 import random
 
 
-@app.route('/randomphrase', methods=['GET'])
-def ending():
+@app.route('/role', methods=['GET'])
+def role():
 
-	list = ['Okay','doing good','amazing feels','alright','enthusiasstic','well?','understanding?']
+	list = ['Hunter','Mechanic','Prospecter','Fighter','Medic','Trader','Leader']
 	
 	return list[random.randrange(6)]

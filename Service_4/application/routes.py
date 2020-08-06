@@ -2,9 +2,9 @@ from application import app
 import requests
 
 
-@app.route('/randomword', methods=['GET'])
-def sentence():
-    beginning = requests.get('http://localhost:5001/randomphrase')
-    ending = requests.get('http://localhost:5002/randomphrase')
-    response = beginning.text + " " + ending.text
-    return response
+@app.route('/character', methods=['GET'])
+def character():
+    race = requests.get('http://localhost:5001/race')
+    role = requests.get('http://localhost:5002/role')
+    character = race.text + " " + role.text
+    return character

@@ -5,7 +5,7 @@ import random
 
 @app.route('/', methods=['GET'])
 def home():
-    response = requests.get('http://localhost:5003/randomword')
-    print(response)
-    sentence = response.text
-    return render_template('index.html', sentence = sentence, title = 'Home')
+    character = requests.get('http://localhost:5003/character')
+    print(character)
+    character = character.text
+    return render_template('index.html', character = character, title = 'Home')
