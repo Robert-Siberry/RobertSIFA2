@@ -1,10 +1,9 @@
 from application import app
+from flask import render_template, request
+import requests
 import random
-
 
 @app.route('/race', methods=['GET'])
 def race():
-
-	list = ['Human','Super Mutant','Ghoul','Synth','Robot']
-	
-	return list[random.randrange(4)]
+    list = ['Dragonborn','Dwarf','Elf','Gnome','Half-Elf','Halfling','Half-Orc','Human','Tiefling']
+    return list[random.randrange(8)]
