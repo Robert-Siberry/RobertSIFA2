@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>
-                Fallout PnP
-            </title>
-        </head>
-        <body>
-            <h1>
-                
-            </h1>
+<html>
+<head>
+    <title>Dungeon & Dragons Random Generator</title>
+</head>
 
-            <p>
-                {{ character }}
-            </p>
+<body>
+    <h1>
+        Race/Class Generator
+    </h1>
+    <p>
+        {{ sentence }}
+    </p>
+    <button onclick="window.location.reload();">
+        Generate
+    </button>
+    <br>
+    <br>
+    <table>
+    {% for dnd in dnd %}
+        <div class="content">
+        <tr>
+            <td>{{ dnd.id }}</td>
+            <td>{{ dnd.races }}</td>
+            <td>{{ dnd.classes }}</td>
+        </tr>
+        </div>
+    {% endfor %}
+    </table>
 
-            <button onclick="window.location.reload();">
-                Generate Character
-            </button>
-        </body>
-    </html>    
+</body>
+
+
+</html>
