@@ -5,7 +5,7 @@
 .dockerignore
 
 # ignore virtual environment
-venv
+venv3
 
 # ignore gitignore file
 .gitignore

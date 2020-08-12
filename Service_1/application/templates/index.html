@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dungeon & Dragons Random Generator</title>
+    <title>FO P&P Character Generator</title>
 </head>
 
 <body>
     <h1>
-        Race/Class Generator
+        Fallout Pen and Paper Race and Role Generator
     </h1>
     <p>
         {{ sentence }}
@@ -17,12 +17,12 @@
     <br>
     <br>
     <table>
-    {% for dnd in dnd %}
+    {% for fopnp in fopnp %}
         <div class="content">
         <tr>
-            <td>{{ dnd.id }}</td>
-            <td>{{ dnd.races }}</td>
-            <td>{{ dnd.classes }}</td>
+            <td>{{ fopnp.id }}</td>
+            <td>{{ fopnp.races }}</td>
+            <td>{{ fopnp.classes }}</td>
         </tr>
         </div>
     {% endfor %}

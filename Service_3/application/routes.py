@@ -3,7 +3,7 @@ from flask import render_template, request
 import requests
 import random
 
-@app.route('/dndclasses', methods=['GET'])
-def dndclasses():
-    list = ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
-    return list[random.randrange(11)]
+@app.route('/role', methods=['GET'])
+def role():
+    list = ['Prospector','Leader','Gunslinger','Mechanic','Figter','Trader']
+    return list[random.randrange(5)]

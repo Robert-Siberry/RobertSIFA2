@@ -1,9 +1,11 @@
-version: "3.7"
+version: "3.3"
 
 services:
 
     service_1:
-        image: rsiberry/service_1
+        image: robertsiberry/service_1
+        ports: 
+            - "5000:5000"
         networks:
             - sfia2_network
         environment:
@@ -20,21 +22,21 @@ services:
             replicas: 3
 
     service_2:
-        image: rsiberry/service_2
+        image: robertsiberry/service_2
         networks:
             - sfia2_network
         deploy:
             replicas: 3
 
     service_3:
-        image: rsiberry/service_3
+        image: robertsiberry/service_3
         networks:
             - sfia2_network
         deploy:
             replicas: 3
 
     service_4:
-        image: rsiberry/service_4
+        image: robertsiberry/service_4
         networks:
             - sfia2_network
         environment:
@@ -43,20 +45,6 @@ services:
             - MYSQL_PORT=${MYSQL_PORT}
             - MYSQL_USER=${MYSQL_USER}
             - MYSQL_DB_NAME=${MYSQL_DB_NAME}
-        deploy:
-            replicas: 3
-    
-    nginx: 
-        image: rsiberry/nginx
-        ports:
-            - "80:80"
-        networks: 
-            - sfia2_network
-        depends_on: 
-            - service_4
-            - service_3
-            - service_2
-            - service_1
         deploy:
             replicas: 3
 

@@ -5,5 +5,5 @@ import random
 
 @app.route('/race', methods=['GET'])
 def race():
-    list = ['Dragonborn','Dwarf','Elf','Gnome','Half-Elf','Halfling','Half-Orc','Human','Tiefling']
-    return list[random.randrange(8)]
+    list = ['Human','Synth','Robot','Super Mutant','Ghoul']
+    return list[random.randrange(4)]
