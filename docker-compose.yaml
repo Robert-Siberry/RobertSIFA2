@@ -1,0 +1,67 @@
+version: "3.7"
+
+services:
+
+    service_1:
+        image: rsiberry/service_1
+        networks:
+            - sfia2_network
+        environment:
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_PORT=${MYSQL_PORT}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_DB_NAME=${MYSQL_DB_NAME}
+        depends_on:
+            - service_4
+            - service_2
+            - service_3
+        deploy:
+            replicas: 3
+
+    service_2:
+        image: rsiberry/service_2
+        networks:
+            - sfia2_network
+        deploy:
+            replicas: 3
+
+    service_3:
+        image: rsiberry/service_3
+        networks:
+            - sfia2_network
+        deploy:
+            replicas: 3
+
+    service_4:
+        image: rsiberry/service_4
+        networks:
+            - sfia2_network
+        environment:
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_PORT=${MYSQL_PORT}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_DB_NAME=${MYSQL_DB_NAME}
+        deploy:
+            replicas: 3
+    
+    nginx: 
+        image: rsiberry/nginx
+        ports:
+            - "80:80"
+        networks: 
+            - sfia2_network
+        depends_on: 
+            - service_4
+            - service_3
+            - service_2
+            - service_1
+        deploy:
+            replicas: 3
+
+networks:
+    
+    sfia2_network:
+        driver: overlay
+
