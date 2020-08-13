@@ -16,25 +16,25 @@ pipeline {
             
         }     
 
-        // stage('Deploy Stack') {;fw
+         stage('Deploy Stack') {;fw
 
-        //         steps {
+                 steps {
 
-        //             sh './scripts/deploy_stack.sh'
+                     sh './scripts/deploystack.sh'
 
 
-        //         }
-        // }
+                }
+        }
 
-        // stage('Clean'){
+         stage('Clean'){
 
-        //         steps {
+                 steps {
 
-        //             sh './scripts/clean.sh'
+                     sh './scripts/clean.sh'
                     
-        //         }
+                 }
 
-       // }
+        }
 
     }
 
