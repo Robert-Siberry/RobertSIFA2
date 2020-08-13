@@ -16,7 +16,7 @@ pipeline {
             
         }     
 
-         stage('Deploy Stack') {;fw
+         stage('Deploy Stack') {
 
                  steps {
 
