@@ -19,8 +19,7 @@ pipeline {
          stage('Deploy Stack') {
 
                  steps {
-jenkins                     sh 'chmod +x ./scripts/*.sh'
-
+                     sh 'chmod +x ./scripts/*.sh'
                      sh './scripts/deploy_stack.sh'
 
 
