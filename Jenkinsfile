@@ -20,7 +20,7 @@ pipeline {
 
                  steps {
 
-                     sh './scripts/deploystack.sh'
+                     sh './scripts/deploy_stack.sh'
 
 
                 }
