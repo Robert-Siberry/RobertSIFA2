@@ -1,5 +1,6 @@
 # README
-# SFIA 2 Project - Paul Lagah
+# SFIA 2 Project - Robert W Siberry
+## Fallout Pen and Paper Character Generator 
 
 ## Table of Contents
 1. Project Brief
@@ -27,11 +28,11 @@ The requirements of the project are as follows:
 - The project must make use of a reverse proxy to make your application accessible to the user.
 
 ### ___Overview___
-This app is a DnD Race/Class Generator.
+This app is a Fallout P&P Race and Role Generator.
 
 Service 1 runs as the front end, displaying the output from Service 4. Service 4 gets a randomly generated race from Service 2, and a randomly generated classes from Service 3, then concatenates them in Service 4 before Service 1 gets them and displays them on the front end app.
 
-![App](https://github.com/paullagah/DevOps/blob/master/App%20Overview.JPG)
+![App](https://imgur.com/te0cb5u)
 
 
 Below is an image of the Timeline showing the use of the Feature Branch model
