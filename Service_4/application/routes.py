@@ -38,7 +38,7 @@ class fopnp(db.Model):
 def merge():
     race = requests.get('http://service_2:5001/race').text
     role = requests.get('http://service_3:5002/role').text
-    response = "Your character is a " + str(race) + str(role)
+    response = "Your character is a " + str(race) + " " + str(role)
     fopnp_data = fopnp(
             races=str(race),
             roles=str(role)
