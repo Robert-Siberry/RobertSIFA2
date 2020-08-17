@@ -37,23 +37,20 @@ Service 1 runs as the front end, displaying the output from Service 4. Service 4
 
 Below is an image of the Timeline showing the use of the Feature Branch model
 
-![FeatureBranch](https://github.com/paullagah/DevOps/blob/master/Feature-Branch%20Timeline.png)
+![FeatureBranch]()
 
 ## Trello Board
 
 Trello Board is what was used to keep a track of my progress on the project and log errors.
 
-![Trello](https://github.com/paullagah/DevOps/blob/master/SFIA2-Trello.JPG)
+![Trello](https://imgur.com/VUqZujrs.png)
 
 In the Below Trello Board you can see the progress as the Sprints were completed and where there may be work carried onto the next Sprint. 
 
 Errors logged that have not yet been moved over to the "Completed" section, are those that were not able to be completed.
 
-Errors that have been Resolved have Solutions in the comments for the Build Number.
 
-Logs that have been put into the "Aborted" Section have comments next to them detailing the reasons for being logged.
-
-![FinalTrello](https://github.com/paullagah/DevOps/blob/master/SFIA2-TrelloFinal.JPG.png)
+![FinalTrello](https://imgur.com/YvHDIdV.png)
 
 ## Risk Assessment
 
