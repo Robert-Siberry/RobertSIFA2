@@ -37,15 +37,13 @@ Service 1 runs as the front end, displaying the output from Service 4. Service 4
 
 Below is an image of the Timeline showing the use of the Feature Branch model
 
-![FeatureBranch]()
+![FeatureBranch](https://imgur.com/VUqZujr.png)
 
 ## Trello Board
 
-Trello Board is what was used to keep a track of my progress on the project and log errors.
+A Trello Board is what I used to keep a track of my progress during project and also log errors.
 
-![Trello](https://imgur.com/VUqZujrs.png)
-
-In the Below Trello Board you can see the progress as the Sprints were completed and where there may be work carried onto the next Sprint. 
+In the below Trello Board you can see the progress as Sprints were completed and where there may be work carried onto the next Sprint. 
 
 Errors logged that have not yet been moved over to the "Completed" section, are those that were not able to be completed.
 
@@ -56,7 +54,7 @@ Errors logged that have not yet been moved over to the "Completed" section, are 
 
 Below you will see the risk assessment carried out for this project:
 
-![Risk_Assessment](https://github.com/paullagah/DevOps/blob/master/SFIA2%20-%20Risk%20Assessment.JPG)
+![Risk_Assessment](https://imgur.com/aLTThj0.png)
 
 
 ## Project Design
@@ -64,48 +62,28 @@ Below you will see the risk assessment carried out for this project:
 
 The Initial CI Pipeline design was made with fewer technologies in mind:
 
-![CIPipelineOld](https://github.com/paullagah/DevOps/blob/master/CI%20Pipeline-old.jpg)
-
-
-The Final CI Pipeline design completed with additional Docker Swarm set up with Ansible configuration added to manage it.
-
-![CIPipeline](https://github.com/paullagah/DevOps/blob/master/CI%20Pipeline.jpg)
-
-### ___Database___
-A relatively simple table was designed for persisting data - the structure can be seen in the image below.
-
-![Database](https://github.com/paullagah/DevOps/blob/master/SFIA2-Database.JPG)
+![CIPipelineOld](https://imgur.com/pkWKyI5.png)
 
 ### ___App Design___
 
-The first image below shows the design made initially for the Race/Class Generator:
+This design implements the persisted data from previously generated Races/Classes:
 
-![AppInitialDesign](https://github.com/paullagah/DevOps/blob/master/SFIA2-App-first.JPG)
-
-This next design implements the persisted data from previously generated Races/Classes:
-
-![AppFinalDesign](https://github.com/paullagah/DevOps/blob/master/SFIA2-App.JPG)
+![AppFinalDesign](https://media.discordapp.net/attachments/736223635676725341/743149880964546671/unknown.png)
 
 
 ## Deployment
-The deployment of the app is automated and handled different tools such as Jenkins, Ansible and Docker. After committing any changes to my GitHub, Jenkins will trigger a pipeline job via a webhook set up through GitHub & Jenkins Configuration. The different stages of the pipeline are outlined in my Jenkinsfile, which for mine currently are: 
-- Run Playbook 
+The deployment of the app is automated and handled different tools such as Jenkins, Ansible and Docker. After committing any changes to my GitHub, Jenkins will trigger a pipeline job via a webhook set up through GitHub & Jenkins Configuration. The different stages of the pipeline are outlined in my Jenkinsfile, which for mine currently are:  
 - Build Images 
 - Deploy Stack 
 - Clean 
  
 In order to improve readability, each step refers to a script which handles a different stage of the pipeline. First, Jenkins will checkout the Github repo then it will initiate the Jenkinsfile stages.
 
-Here, Jenkins will configure my machines with the use of Ansible. My Ansible playbook specifies different roles which allow me to install different requirements depending on what each machine will be responsible for. For every machine, Ansible will install Docker. It will then configure my swarm - creating a swarm on my swarm manager, and joining that swarm on my worker machine.
-
-Finally, Jenkins will deploy the application from the swarm manager machine using docker stack. This will balance the load of the containers across the two machines, just before performing clean-up exercises on the Manager node.
-
-![PipelineStage](https://github.com/paullagah/DevOps/blob/master/SFIA-Pipeline-stage.png)
+Then, Jenkins will deploy the application from the swarm manager machine using docker stack. This will balance the load of the containers across the two machines, just before performing clean-up exercises on the Manager node.
 
 
-If there is any failures in the pipeline jobs then it will be displayed as the following.
 
-![FailedStage](https://github.com/paullagah/DevOps/blob/master/SFIA2-Pipeline-stage-fail.png)
+If there is any failures in the pipeline jobs then it will be displayed as on the jenkins build page
 
 ## Retrospective
 As each Sprint continued and more work was carried out, things that could have been done better were:
@@ -116,8 +94,6 @@ As each Sprint continued and more work was carried out, things that could have b
 ## Improvements
 
 There could be some improvements made to the project, as stated below:
-- Add a logo
-- Implement a more graphical design
-- Produce stats for character upon creation
-- Suggest Name to be made for character, or apply an option of 3 different names
-- Set up Search Functionality for their Character ID
+- Add a more asthetic design
+- Also generate S.P.E.C.I.A.L stats for each character
+- Add up Search Functionality to look up previously generated characters
