@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /var/lib/jenkins/.bashrc
+
 #Build clean version of service_1 image
 docker build --no-cache -t robertsiberry/service_1:latest ./Service_1
 #Pushes new built image to docker hub
@@ -19,5 +21,7 @@ docker push robertsiberry/service_3
 docker build --no-cache -t robertsiberry/service_4:latest ./Service_4
 #Pushes new built image to docker hub
 docker push robertsiberry/service_4
+
+docker stack deploy --compose-file docker-compose.yaml fopnpservice
 
 printenv
