@@ -30,7 +30,7 @@ The requirements of the project are as follows:
 ### ___Overview___
 This app is a Fallout P&P Race and Role Generator.
 
-Service 1 runs as the front end, displaying the output from Service 4. Service 4 gets a randomly generated race from Service 2, and a randomly generated classes from Service 3, then concatenates them in Service 4 before Service 1 gets them and displays them on the front end app.
+Service 1 runs as the front end, displaying the output from Service 4. Service 4 gets a randomly generated race from Service 2, and a randomly generated role from Service 3, then concatenates them in Service 4 which then passes them back to  Service 1 gets them and displays them on the front end app.
 
 ![App](https://imgur.com/te0cb5u.png)
 
@@ -66,7 +66,7 @@ The Initial CI Pipeline design was made with fewer technologies in mind:
 
 ### ___App Design___
 
-This design implements the persisted data from previously generated Races/Classes:
+This design implements the persisted data from previously generated Races/Roles:
 
 ![AppFinalDesign](https://media.discordapp.net/attachments/736223635676725341/743149880964546671/unknown.png)
 
