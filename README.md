@@ -1,4 +1,3 @@
-# README
 # SFIA 2 Project - Robert W Siberry
 ## Fallout Pen and Paper Character Generator 
 
