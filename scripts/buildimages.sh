@@ -19,3 +19,5 @@ docker push robertsiberry/service_3
 docker build --no-cache -t robertsiberry/service_4:latest ./Service_4
 #Pushes new built image to docker hub
 docker push robertsiberry/service_4
+
+printenv
