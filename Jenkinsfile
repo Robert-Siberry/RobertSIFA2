@@ -14,27 +14,27 @@ pipeline {
                     
                 }
             
-           }     
+        //    }     
 
-          stage('Deploy Stack') {
+        //   stage('Deploy Stack') {
 
-                  steps {
-                     sh 'chmod +x ./scripts/*.sh'
-                     sh './scripts/deploy_stack.sh'
+        //           steps {
+        //              sh 'chmod +x ./scripts/*.sh'
+        //              sh './scripts/deploy_stack.sh'
 
 
-                 }
-         }
+        //          }
+        //  }
 
-          stage('Clean'){
+        //   stage('Clean'){
 
-                  steps {
-                      sh 'chmod +x ./scripts/*.sh'
-                      sh './scripts/clean.sh'
+        //           steps {
+        //               sh 'chmod +x ./scripts/*.sh'
+        //               sh './scripts/clean.sh'
                     
-                  }
+        //           }
 
-         }
+        //  }
 
     }
 
