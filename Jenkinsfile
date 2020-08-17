@@ -20,8 +20,8 @@ pipeline {
 
                 steps {
                        
-                    sh 'chmod +x ./scripts/*.sh'
-                    sh './scripts/deploy_stack.sh'
+                    sh 'chmod +x ./scripts2/*.sh'
+                    sh './scripts2/deploy_stack.sh'
 
                 }
             }
