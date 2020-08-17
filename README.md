@@ -72,7 +72,7 @@ This design implements the persisted data from previously generated Races/Roles:
 
 
 ## Deployment
-The deployment of the app is automated and handled different tools such as Jenkins, Ansible and Docker. After committing any changes to my GitHub, Jenkins will trigger a pipeline job via a webhook set up through GitHub & Jenkins Configuration. The different stages of the pipeline are outlined in my Jenkinsfile, which for mine currently are:  
+The deployment of the app is automated and handled different tools such as Jenkins and Docker. After committing any changes to my GitHub, Jenkins will trigger a pipeline job via a webhook set up through GitHub & Jenkins Configuration. The different stages of the pipeline are outlined in my Jenkinsfile, which for mine currently are:  
 - Build Images 
 - Deploy Stack 
 - Clean 
