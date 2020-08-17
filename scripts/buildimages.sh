@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /var/lib/jenkins/.bashrc
+
 #Build clean version of service_1 image
 docker build --no-cache -t robertsiberry/service_1:latest ./Service_1
 #Pushes new built image to docker hub
