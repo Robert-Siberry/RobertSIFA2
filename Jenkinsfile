@@ -14,7 +14,7 @@ pipeline {
                     
                 }
             
-            }     
+        }     
 
         stage('Deploy Stack') {
 
@@ -24,7 +24,7 @@ pipeline {
                     sh './scripts2/deploy_stack.sh'
 
                 }
-            }
+        }
 
         stage('Clean'){
 
@@ -35,7 +35,7 @@ pipeline {
                     
                 }
 
-            }
+        }
 
     }
 
