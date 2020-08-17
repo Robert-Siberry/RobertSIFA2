@@ -37,7 +37,7 @@ Service 1 runs as the front end, displaying the output from Service 4. Service 4
 
 Below is an image of the Timeline showing the use of the Feature Branch model
 
-![FeatureBranch](https://imgur.com/VUqZujr.png)
+![FeatureBranch](https://imgur.com/mgAip6I.png)
 
 ## Trello Board
 
@@ -48,7 +48,7 @@ In the below Trello Board you can see the progress as Sprints were completed and
 Errors logged that have not yet been moved over to the "Completed" section, are those that were not able to be completed.
 
 
-![FinalTrello](https://imgur.com/YvHDIdV.png)
+![Trello](https://imgur.com/YvHDIdV.png)
 
 ## Risk Assessment
 
