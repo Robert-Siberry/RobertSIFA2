@@ -40,5 +40,5 @@ def home():
     response = requests.get('http://service_4:5003/merge')
     print(response)
     sentence = response.text
-    fopnp = fopnp.query.all()
+    fopnp_data = fopnp.query.all()
     return render_template('index.html', sentence=sentence, fopnp=fopnp_data, title='Home')
