@@ -30,14 +30,14 @@ The requirements of the project are as follows:
 ### ___Overview___
 This app is a Fallout P&P Race and Role Generator.
 
-Service 1 runs as the front end, displaying the output from Service 4. Service 4 gets a randomly generated race from Service 2, and a randomly generated classes from Service 3, then concatenates them in Service 4 before Service 1 gets them and displays them on the front end app.
+Service 1 runs as the front end, displaying the output from Service 4. Service 4 gets a randomly generated race from Service 2, and a randomly generated role from Service 3, then concatenates them in Service 4 which then passes them back to  Service 1 gets them and displays them on the front end app.
 
 ![App](https://imgur.com/te0cb5u.png)
 
 
 Below is an image of the Timeline showing the use of the Feature Branch model
 
-![FeatureBranch](https://imgur.com/VUqZujr.png)
+![FeatureBranch](https://imgur.com/mgAip6I.png)
 
 ## Trello Board
 
@@ -48,7 +48,7 @@ In the below Trello Board you can see the progress as Sprints were completed and
 Errors logged that have not yet been moved over to the "Completed" section, are those that were not able to be completed.
 
 
-![FinalTrello](https://imgur.com/YvHDIdV.png)
+![Trello](https://imgur.com/YvHDIdV.png)
 
 ## Risk Assessment
 
@@ -66,13 +66,13 @@ The Initial CI Pipeline design was made with fewer technologies in mind:
 
 ### ___App Design___
 
-This design implements the persisted data from previously generated Races/Classes:
+This design implements the persisted data from previously generated Races/Roles:
 
 ![AppFinalDesign](https://media.discordapp.net/attachments/736223635676725341/743149880964546671/unknown.png)
 
 
 ## Deployment
-The deployment of the app is automated and handled different tools such as Jenkins, Ansible and Docker. After committing any changes to my GitHub, Jenkins will trigger a pipeline job via a webhook set up through GitHub & Jenkins Configuration. The different stages of the pipeline are outlined in my Jenkinsfile, which for mine currently are:  
+The deployment of the app is automated and handled different tools such as Jenkins and Docker. After committing any changes to my GitHub, Jenkins will trigger a pipeline job via a webhook set up through GitHub & Jenkins Configuration. The different stages of the pipeline are outlined in my Jenkinsfile, which for mine currently are:  
 - Build Images 
 - Deploy Stack 
 - Clean 
